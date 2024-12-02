@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body>
+      <header>
+        <a href="imc.html">imc</a>
+        <a href="cep.html">calculo</a>
+        <a href="ohm.html">ohm</a>
+        <a href="index.html">ohm</a>
+      </header>
+        <label>Numero 1</label>
+        <input Id="num1" type="number">
+        <label>Numero 2</label>
+        <input Id="num2" type="number">
+        <label>pesso</label>
+        <input Id="pesso" type="number">
+        <label>altura</label>
+        <input Id="altura" type="number">
+        <label>base</label>
+        <input Id="base" type="number">
+        <label>expoente</label>
+        <input Id="expoente" type="number">
+
+        <button onclick="somar()">somar</button>
+        <button onclick="multiplicar()">multiplicar</button>
+        <button onclick="subtrair()">subtrair</button>
+        <button onclick="dividir()">dividir</button>
+        <button onclick="dividir()">dividir</button>
+        <button onclick="imc()">imc</button>
+        <button onclick="potencia()">potência</button>
+
+        <h3 Id="resultado"></h3>
+
+        <script> 
+            function somar(){
+                var num1 = parseFloat(document.getElementById("num1").value);
+                var num2 = parseFloat(document.getElementById("num2").value);
+                var resultado = num1+num2
+
+                document.getElementById("resultado").innerHTML = resultado
+
+            }
+            function multiplicar(){
+              var num1 = parseFloat(document.getElementById("num1").value);
+              var num2 = parseFloat(document.getElementById("num2").value);
+              var resultado = num1*num2
+
+              document.getElementById("resultado").innerHTML = resultado
+
+            }
+            function subtrair(){
+              var num1 = parseFloat(document.getElementById("num1").value);
+              var num2 = parseFloat(document.getElementById("num2").value);
+              var resultado = num1-num2
+
+              document.getElementById("resultado").innerHTML = resultado
+
+            }
+            function dividir(){
+              var num1 = parseFloat(document.getElementById("num1").value);
+              var num2 = parseFloat(document.getElementById("num2").value);
+              var resultado = num1/num2
+
+              document.getElementById("resultado").innerHTML = resultado
+            
+            }
+            function imc(){
+              var pesso = parseFloat(document.getElementById("pesso").value);
+              var altura = parseFloat(document.getElementById("altura").value);
+              var resultado = pesso/(altura*altura)
+
+              document.getElementById("resultado").innerHTML = resultado
+            
+            }
+            function potencia(){
+              var base = parseFloat(document.getElementById("base").value);
+              var expoente = parseFloat(document.getElementById("expoente").value);
+
+              var resultado = 1;
+
+                   for (let i = 0; i < expoente; i++) {
+                  resultado = resultado*base;
+                   
+                }
+                document.getElementById("resultado").innerHTML = resultado
+            }
+            
+            
+        </script>
+    </body>
+</html>

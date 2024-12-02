@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body>
+      <header>
+        <a href="imc.html">imc</a>
+        <a href="cep.html">calculo</a>
+         <a href="ohm.html">ohm</a>
+         <a href="index.html">ohm</a>
+      </header>
+      <h1>Primeira lei de ohms</h1>
+      <h4>tensão (voltagem) em volts (V)</h4>
+      <h4>resistência em ohms (Ω)</h4>
+      <h4>corrente em amperes (A).</h4>
+
+        <label>tensao</label>
+        <input id="tensao" type="number">
+        <label>resistencia</label>
+        <input id="resistencia" type="number">
+        <label>corrente</label>
+        <input id="corrente" type="number">
+        <button onclick="ohms()">resultado</button>
+        <h3 id="resultado"></h3>
+        
+        <script>
+             function ohms(){
+                var tensao = parseFloat(document.getElementById("tensao").value);
+                var resistencia = parseFloat(document.getElementById("resistencia").value);
+                var corrente = parseFloat(document.getElementById("corrente").value);
+        
+              if(isNaN(tensao)){
+                resultado = resistencia*corrente
+            }
+
+            if(isNaN(resistencia)){
+                resultado = tensao/corrente
+            }
+
+            if(isNaN(corrente)){
+                resultado = tensao/resistencia
+            }
+
+            document.getElementById("resultado").innerHTML = resultado
+            }
+        </script>
+    </body>
+</html>
